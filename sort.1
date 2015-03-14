@@ -1,0 +1,34 @@
+.\"sort man page for CSCI 241
+.\" Eva Fineberg and Ruby Boyd  - Fall 2014 
+.TH sort_man 1 "4 November 2014" "CSCI 241" "Oberlin College" 
+
+.SH NAME
+.B sort
+\- input of text, characters, strings, numbers 
+
+.SH SYNOPSIS
+.B sort
+[ -x flags ]
+<filename> 
+
+.SH DESCRIPTION
+This program reads in lines of text and then sorts them based on specified criteria interpreted by the flags.
+These flags are cumulative. 
+
+.SH OPTIONS
+.IP " "
+No flag specifies sorts the input using the default ordering of strcmp.
+.IP "-f " <inputfile
+Sorts input via folding case, this uses the case insensitive ordering of strcasecmp.
+.IP "-n " <inputfile
+This sorts the input based on the leading numeric value. If there is none, and no other flags are specified it will default to strcmp() ordering.
+If there are no leading numeric values and -f is specified, the program will resort to ordering by strcasecmp().
+.IP "-h " or "-? " <inputfile
+Will print out instruction statements to help the user use the sort program. 
+
+.SH AUTHOR
+Eva Fineberg Ruby Boyd (Fall 2014)
+ 
+.SH BUGS
+There are no bugs in this code.
+                                 
